@@ -1,14 +1,18 @@
-var getQuote = function(quotes, hero){
-  var realHero;
-  switch(hero.substring(0,3)){
-    case 'Rob': realHero="Robin"; break;
-    case 'Bat' : realHero = "Batman";break;
-    case 'Jok' : realHero = "Joker";break;
-  }
+// Description:
 
-  for(var l in hero){
-    if(!isNaN(hero[l])){  
-    return realHero +": "+quotes[parseInt(hero[l])];
-    }
-  }
+// Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from
+// the trolls' comments, neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string
+// with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths
+// wbst s fr lsrs LL!".
+
+function disemvowel(str) {
+  var re = /a|e|i|o|u/gi; 
+  str = str.replace(re, '');
+  return str;
 }
